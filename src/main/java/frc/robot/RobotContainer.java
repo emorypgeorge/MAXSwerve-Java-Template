@@ -15,6 +15,7 @@ import frc.robot.subsystems.LauncherSubsystem;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+import frc.robot.commands.*;
 
 /*
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
@@ -64,8 +65,10 @@ public class RobotContainer {
    */
 
   private void configureButtonBindings() {
+    //Hold A to intake a ring - moves the intake and conveyor in unison
+    controller.a().whileTrue(new PickUpRingCommand(intake, conveyor));
 
-    controller.a().whileTrue(new RunCommand(() -> intake.in(), intake));
+
     
 
   }

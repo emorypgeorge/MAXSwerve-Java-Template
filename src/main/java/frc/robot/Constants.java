@@ -22,6 +22,35 @@ import edu.wpi.first.math.util.Units;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+
+  public static final class ConveyorSubsystemConstants {
+    //SPARK MAX CAN IDs
+    public static final int conveyorMotorCanId = 8;
+
+    //Speed constants
+    public static final double upConveyorSpeed = 0.7;
+    public static final double downConveyorSpeed = -0.5;
+  }
+
+  public static final class IntakeSubsystemConstants {
+    //SPARK MAX CAN IDs
+    public static final int intakeMotorCanId = 9;
+
+    //Speed constants
+    public static final double intakeSpeed = 1.0;
+    public static final double outtakeSpeed = -0.6;
+  }
+
+  public static final class LauncherSubsystemConstants {
+    //SPARK MAX CAN IDs
+    public static final int launcherLeftMotorCanId = 10;
+    public static final int launcherRightMotorCanId = 11;
+
+    //Speed constants
+    public static final double fastLauncherSpeed = 0.85;
+    public static final double slowLauncherSpeed = -0.5;
+  }
+
   public static final class DriveConstants {
     // Driving Parameters - Note that these are not the maximum capable speeds of
     // the robot, rather the allowed maximum speeds
@@ -51,10 +80,10 @@ public final class Constants {
     public static final int kFrontRightDrivingCanId = 3;
     public static final int kRearRightDrivingCanId = 4;
 
-    public static final int kFrontLeftTurningCanId = 10;
-    public static final int kRearLeftTurningCanId = 12;
-    public static final int kFrontRightTurningCanId = 14;
-    public static final int kRearRightTurningCanId = 16;
+    public static final int kFrontLeftTurningCanId = 5;
+    public static final int kRearLeftTurningCanId = 6;
+    public static final int kFrontRightTurningCanId = 7;
+    public static final int kRearRightTurningCanId = 8;
 
     public static final boolean kGyroReversed = false;
   }
